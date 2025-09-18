@@ -766,3 +766,128 @@ section {
   background-color: var(--color-white);
   color: var(--color-secondary);
 }
+
+/* ---------- Global fluid media ---------- */
+img, video { max-width: 100%; height: auto; display: block; }
+.main-title h2 { line-height: 1.2; }
+
+/* ---------- Tablet (<=1024px) tweaks ---------- */
+@media (max-width: 1024px) {
+  .header-content { gap: 24px; }
+  .right-header p { font-size: 1rem; }
+  .portfolios { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+
+/* ---------- Mobile (<=768px) core responsive ---------- */
+@media (max-width: 768px) {
+
+  /* spacing + readable text */
+  body { font-size: 16px; }
+  .section { padding: 24px 16px; }
+
+  /* ----- Header (sec1) ----- */
+  .header-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 16px;
+    text-align: center;
+  }
+  .left-header { order: 1; }
+  .left-header .image { width: 180px; height: 180px; margin: 0 auto; overflow: hidden; border-radius: 50%; }
+  .right-header { order: 2; }
+  .right-header .name { font-size: 1.6rem; }
+  .right-header p { margin-top: 8px; }
+  .btn-cont { display: flex; justify-content: center; }
+
+  /* ----- About (sec2) ----- */
+  .about-cont { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .left-about h4 { font-size: 1.1rem; }
+  .right-about {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 12px;
+  }
+  .right-about .about-item { padding: 12px; }
+  .about-stats .progress-bars { gap: 12px; }
+  .progress-bar .progress-cont { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; }
+  .progress-bar .progess-percent { font-size: .9rem; }
+
+  /* ----- Timeline ----- */
+  .timeline {
+    margin-top: 24px;
+    display: block;  /* single column */
+    padding-bottom: 0;
+  }
+  .timeline-item {
+    margin: 0 0 16px 0;
+    padding-left: 16px;  /* thinner left line/space */
+  }
+  .timeline-item .timeline-icon {
+    width: 36px; height: 36px; left: -18px;
+  }
+  .timeline-duration { font-size: .85rem; }
+
+  /* ----- Portfolio (sec3) ----- */
+  .portfolio-text { text-align: left; margin-bottom: 12px; }
+  .portfolios {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on phones */
+    gap: 16px;
+  }
+  .portfolio-item .hover-items {
+    /* show details on mobile (no hover) */
+    opacity: 1; visibility: visible; transform: none; position: static; padding: 10px 8px 12px;
+  }
+  .portfolio-item .image { border-radius: 10px; overflow: hidden; }
+
+  /* ----- Credentials (sec4) ----- */
+  .credentials { display: grid; gap: 14px; }
+  .credential-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: start;
+    gap: 10px;
+  }
+  .credential-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; }
+  .credential-details h3 { font-size: 1rem; }
+  .credential-details h4 { font-size: .9rem; }
+
+  /* ----- Contact (sec5) ----- */
+  .contact-content { padding: 0; }
+  .contact-box {
+    border-radius: 12px;
+    padding: 14px;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  }
+  /* expand by default on mobile so nothing is hidden due to hover */
+  .contact-box { max-height: none !important; overflow: visible !important; }
+  .contact-info .info-item { 
+    display: grid; grid-template-columns: 1fr; gap: 6px; 
+    padding: 8px 0; 
+  }
+  .contact-info a { word-break: break-word; }
+
+  /* ----- Floating controls buttons ----- */
+  .controls {
+    position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 10px; z-index: 50;
+    background: rgba(0,0,0,0.35); backdrop-filter: blur(6px);
+    padding: 6px 10px; border-radius: 999px;
+  }
+  .control { width: 42px; height: 42px; display: grid; place-items: center; }
+
+  /* general headings */
+  .main-title h2 { font-size: 1.5rem; }
+  .back-text { display: none; }
+}
+
+/* ---------- Small phones (<=480px) polish ---------- */
+@media (max-width: 480px) {
+  .right-header .name { font-size: 1.4rem; }
+  .right-about { grid-template-columns: 1fr; }
+  .portfolio-item .project-description,
+  .portfolio-item .project-skills { font-size: .95rem; }
+  .credential-details p { font-size: .95rem; }
+}
