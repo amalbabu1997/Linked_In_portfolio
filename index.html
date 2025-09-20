@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
+
+    <!-- CSS (compiled from SCSS) -->
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Icons & Fonts -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,11 +21,11 @@
   </head>
   <body>
     <header class="section sec1 header active">
-      <div class="header-content">
+      <div class="header-content container">
         <div class="left-header">
-          <div class="h-shape"></div>
+          <div class="h-shape" aria-hidden="true"></div>
           <div class="image">
-            <img src="images/IMG_0304.jpg" alt="Profile Image" />
+            <img src="images/IMG_0304.jpg" alt="Portrait of Amal Babu" />
           </div>
         </div>
         <div class="right-header">
@@ -44,20 +48,21 @@
               class="main-btn"
             >
               <span class="btn-text">Download CV</span>
-              <span class="btn-icon">
-                <i class="fa-solid fa-download"></i>
-              </span>
+              <span class="btn-icon"><i class="fa-solid fa-download"></i></span>
             </a>
           </div>
         </div>
       </div>
     </header>
+
     <main class="main-content">
+      <!-- About -->
       <section class="section sec2">
         <div class="main-title">
           <h2>About <span>me</span><span class="back-text">MY STATUS</span></h2>
         </div>
-        <div class="about-cont">
+
+        <div class="about-cont container">
           <div class="left-about">
             <h4>SUMMARY</h4>
             <p>
@@ -77,37 +82,31 @@
                 class="main-btn"
               >
                 <span class="btn-text">Download CV</span>
-                <span class="btn-icon">
-                  <i class="fa-solid fa-download"></i>
-                </span>
+                <span class="btn-icon"
+                  ><i class="fa-solid fa-download"></i
+                ></span>
               </a>
             </div>
           </div>
+
           <div class="right-about">
             <div class="about-item">
               <div class="about-text">
                 <p class="large-text">2</p>
-                <p class="small-text">
-                  MNC Experienece <br />
-                  Accomplished
-                </p>
+                <p class="small-text">MNC Experienece <br />Accomplished</p>
               </div>
             </div>
             <div class="about-item">
               <div class="about-text">
                 <p class="large-text">Over 3 years</p>
-                <p class="small-text">
-                  Of Experienece <br />
-                  Accomplished
-                </p>
+                <p class="small-text">Of Experienece <br />Accomplished</p>
               </div>
             </div>
             <div class="about-item">
               <div class="about-text">
                 <p class="large-text">More Than 15</p>
                 <p class="small-text">
-                  Enterprise level Software <br />
-                  Skillset
+                  Enterprise level Software <br />Skillset
                 </p>
               </div>
             </div>
@@ -115,73 +114,62 @@
               <div class="about-text">
                 <p class="large-text">2</p>
                 <p class="small-text">
-                  Domain-specific Knowledge <br />
-                  (Retail & Utility Sectors)
+                  Domain-specific Knowledge <br />(Retail & Utility Sectors)
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="about-stats">
+
+        <div class="about-stats container">
           <h4 class="stat-title">My Skills</h4>
           <div class="progress-bars">
             <div class="progress-bar">
               <p class="progress-title">Python</p>
               <div class="progress-cont">
-                <p class="progess-percent">90 %</p>
-                <div class="progress">
-                  <span class="python"></span>
-                </div>
+                <p class="progress-percent">90 %</p>
+                <div class="progress"><span class="python"></span></div>
               </div>
             </div>
             <div class="progress-bar">
               <p class="progress-title">CSS</p>
               <div class="progress-cont">
-                <p class="progess-percent">90 %</p>
-                <div class="progress">
-                  <span class="python"></span>
-                </div>
+                <p class="progress-percent">90 %</p>
+                <div class="progress"><span class="css"></span></div>
               </div>
             </div>
             <div class="progress-bar">
               <p class="progress-title">React</p>
               <div class="progress-cont">
-                <p class="progess-percent">70 %</p>
-                <div class="progress">
-                  <span class="react"></span>
-                </div>
+                <p class="progress-percent">70 %</p>
+                <div class="progress"><span class="react"></span></div>
               </div>
             </div>
             <div class="progress-bar">
               <p class="progress-title">Power BI</p>
               <div class="progress-cont">
-                <p class="progess-percent">80 %</p>
-                <div class="progress">
-                  <span class="powerbi"></span>
-                </div>
+                <p class="progress-percent">80 %</p>
+                <div class="progress"><span class="powerbi"></span></div>
               </div>
             </div>
             <div class="progress-bar">
               <p class="progress-title">SQL</p>
               <div class="progress-cont">
-                <p class="progess-percent">100 %</p>
-                <div class="progress">
-                  <span class="sql"></span>
-                </div>
+                <p class="progress-percent">100 %</p>
+                <div class="progress"><span class="sql"></span></div>
               </div>
             </div>
             <div class="progress-bar">
               <p class="progress-title">HTML 5</p>
               <div class="progress-cont">
-                <p class="progess-percent">100 %</p>
-                <div class="progress">
-                  <span class="html"></span>
-                </div>
+                <p class="progress-percent">100 %</p>
+                <div class="progress"><span class="html"></span></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="timeline">
+
+        <div class="timeline container">
           <div class="timeline-item">
             <div class="timeline-icon">
               <i class="fa-solid fa-briefcase"></i>
@@ -235,7 +223,6 @@
             <p class="timeline-duration">2020-june – 2021-june</p>
             <h5>Programmer <span> - Cognizant Technologies Solutions</span></h5>
           </div>
-
           <div class="timeline-item">
             <div class="timeline-icon">
               <i class="fa-solid fa-briefcase"></i>
@@ -249,6 +236,7 @@
         </div>
       </section>
 
+      <!-- Portfolio -->
       <section class="section sec3">
         <div class="main-title">
           <h2>
@@ -258,8 +246,9 @@
         <p class="portfolio-text">
           Here are some of the skills that I want to highlight.
         </p>
-        <div class="portfolios">
-          <!-- GCP Project -->
+
+        <div class="portfolios container">
+          <!-- Items unchanged structurally; images and links preserved -->
           <div class="portfolio-item">
             <div class="image">
               <img
@@ -289,7 +278,6 @@
             </div>
           </div>
 
-          <!-- Hive Project -->
           <div class="portfolio-item">
             <div class="image">
               <img src="images/last rey etl main.webp" alt="Hive Project" />
@@ -316,7 +304,6 @@
             </div>
           </div>
 
-          <!-- Kafka Project -->
           <div class="portfolio-item">
             <div class="image">
               <img src="images/etl-mid.png" alt="Kafka Project" />
@@ -334,7 +321,6 @@
                 <a href="#" class="portfolio-icon"
                   ><i class="fab fa-github"></i
                 ></a>
-
                 <a href="#" class="portfolio-icon"
                   ><i class="fab fa-youtube"></i
                 ></a>
@@ -342,10 +328,9 @@
             </div>
           </div>
 
-          <!-- powerbi Project -->
           <div class="portfolio-item">
             <div class="image">
-              <img src="images/powerbi-clean.webp" alt="Tableau Project" />
+              <img src="images/powerbi-clean.webp" alt="Power BI Project" />
             </div>
             <div class="hover-items">
               <h3>Project Source</h3>
@@ -369,10 +354,12 @@
             </div>
           </div>
 
-          <!-- music control spotify -->
           <div class="portfolio-item">
             <div class="image">
-              <img src="images/music-clesn.webp" alt="Oracle DB Project" />
+              <img
+                src="images/music-clesn.webp"
+                alt="Music control via Spotify API"
+              />
             </div>
             <div class="hover-items">
               <h3>Project Source</h3>
@@ -394,9 +381,10 @@
               </div>
             </div>
           </div>
+
           <div class="portfolio-item">
             <div class="image">
-              <img src="images/datawarehouse.png" alt="Oracle DB Project" />
+              <img src="images/datawarehouse.png" alt="Oracle Data Warehouse" />
             </div>
             <div class="hover-items">
               <h3>Project Source</h3>
@@ -424,12 +412,14 @@
           </div>
         </div>
       </section>
+
+      <!-- Credentials -->
       <section class="section sec4">
-        <div class="blogs-content">
+        <div class="blogs-content container">
           <div class="main-title">
             <h2>
-              Education, <span>Certifications & Interests</span>
-              <span class="back-text">CREDENTIALS</span>
+              Education, <span>Certifications & Interests</span
+              ><span class="back-text">CREDENTIALS</span>
             </h2>
           </div>
 
@@ -451,7 +441,6 @@
               </div>
             </div>
 
-            <!-- Certification Entry -->
             <div class="credential-item">
               <div class="credential-icon">
                 <i class="fa-solid fa-certificate"></i>
@@ -498,8 +487,9 @@
         </div>
       </section>
 
+      <!-- Contact -->
       <section class="section sec5" id="contact">
-        <div class="contact-content">
+        <div class="contact-content container">
           <div class="main-title">
             <h2>
               Contact <span>Me</span><span class="back-text">GET IN TOUCH</span>
@@ -536,6 +526,7 @@
                 <a
                   href="https://www.linkedin.com/in/amal-babu-8a4531228"
                   target="_blank"
+                  rel="noopener"
                   >My LinkedIn Profile</a
                 >
               </div>
@@ -544,6 +535,7 @@
                 <a
                   href="https://github.com/amalbabu1997?tab=repositories"
                   target="_blank"
+                  rel="noopener"
                   >View Projects</a
                 >
               </div>
@@ -552,23 +544,30 @@
         </div>
       </section>
     </main>
-    <div class="controls">
-      <div class="control control-1 active-btn" data-id="sec1">
-        <i class="fa-solid fa-house"></i>
-      </div>
-      <div class="control control-2" data-id="sec2">
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <div class="control control-3" data-id="sec3">
-        <i class="fa-solid fa-briefcase"></i>
-      </div>
-      <div class="control control-4" data-id="sec4">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <div class="control control-5" data-id="sec5">
-        <i class="fa-solid fa-envelope"></i>
-      </div>
+
+    <!-- Controls -->
+    <div class="controls" aria-label="Section navigation">
+      <button
+        class="control control-1 active-btn"
+        data-id="sec1"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
+      </button>
+      <button class="control control-2" data-id="sec2" aria-label="About">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+      </button>
+      <button class="control control-3" data-id="sec3" aria-label="Portfolio">
+        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+      </button>
+      <button class="control control-4" data-id="sec4" aria-label="Credentials">
+        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+      </button>
+      <button class="control control-5" data-id="sec5" aria-label="Contact">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </button>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
