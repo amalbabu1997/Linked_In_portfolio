@@ -337,10 +337,10 @@ img, video {
   transition: width 0.4s ease;
 }
 .progress .python {
-  width: 90%;
+  width: 100%;
 }
 .progress .react {
-  width: 70%;
+  width: 90%;
 }
 .progress .sql {
   width: 100%;
@@ -352,7 +352,7 @@ img, video {
   width: 90%;
 }
 .progress .powerbi {
-  width: 80%;
+  width: 90%;
 }
 
 /* Timeline */
