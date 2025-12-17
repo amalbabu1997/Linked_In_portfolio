@@ -583,5 +583,119 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Check if device is mobile/tablet based on screen width
+        function isMobileDevice() {
+          return window.innerWidth <= 768;
+        }
+
+        // Get all portfolio items
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+        // Add close button to each portfolio item
+        portfolioItems.forEach((item) => {
+          // Create close button
+          const closeBtn = document.createElement("button");
+          closeBtn.className = "close-btn";
+          closeBtn.innerHTML = "&times;";
+          closeBtn.setAttribute("aria-label", "Close details");
+
+          // Find hover-items and append close button
+          const hoverItems = item.querySelector(".hover-items");
+          if (hoverItems) {
+            hoverItems.insertBefore(closeBtn, hoverItems.firstChild);
+          }
+
+          // Click handler for portfolio item
+          item.addEventListener("click", function (e) {
+            // Only apply click behavior on mobile/tablet
+            if (!isMobileDevice()) return;
+
+            // Don't toggle if clicking on links, icons, or close button
+            if (
+              e.target.closest("a") ||
+              e.target.closest(".portfolio-icon") ||
+              e.target.closest(".close-btn") ||
+              e.target.closest(".portfolio-icons")
+            ) {
+              return;
+            }
+
+            // Close all other items
+            portfolioItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                otherItem.classList.remove("active");
+              }
+            });
+
+            // Toggle current item
+            const wasActive = item.classList.contains("active");
+            item.classList.toggle("active");
+
+            // If opening, scroll to top of overlay content
+            if (!wasActive && item.classList.contains("active")) {
+              setTimeout(() => {
+                const hoverItems = item.querySelector(".hover-items");
+                if (hoverItems) {
+                  hoverItems.scrollTop = 0;
+                }
+              }, 100);
+            }
+          });
+
+          // Close button handler
+          closeBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            item.classList.remove("active");
+          });
+        });
+
+        // Close active item when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!isMobileDevice()) return;
+
+          if (!e.target.closest(".portfolio-item")) {
+            portfolioItems.forEach((item) => {
+              item.classList.remove("active");
+            });
+          }
+        });
+
+        // Handle window resize - close all items when switching between mobile/desktop
+        let resizeTimer;
+        window.addEventListener("resize", function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            portfolioItems.forEach((item) => {
+              item.classList.remove("active");
+            });
+          }, 250);
+        });
+
+        // Prevent body scroll when portfolio item is active (optional)
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function (mutation) {
+            if (mutation.attributeName === "class") {
+              const hasActive = document.querySelector(
+                ".portfolio-item.active"
+              );
+              if (hasActive && isMobileDevice()) {
+                // Optional: prevent background scrolling
+                // document.body.style.overflow = 'hidden';
+              } else {
+                document.body.style.overflow = "";
+              }
+            }
+          });
+        });
+
+        portfolioItems.forEach((item) => {
+          observer.observe(item, { attributes: true });
+        });
+      })();
+    </script>
   </body>
 </html>
